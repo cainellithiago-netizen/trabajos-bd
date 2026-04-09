@@ -1,7 +1,7 @@
 # Foro Gaming
 
-## DescripciÃ³n
-PÃ¡gina web tipo foro donde los usuarios pueden interactuar con publicaciones.
+## Descripción
+Página web tipo foro donde los usuarios pueden interactuar con publicaciones.
 
 ## Contenido
 - Login

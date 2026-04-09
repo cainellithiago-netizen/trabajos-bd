@@ -1,46 +1,58 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
-     <link rel="icon" href="https://www.google.com/s2/favicons?domain=linux.org&sz=64">
+    <!-- ===== CONFIGURACIÓN BÁSICA ===== -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Foro Gaming</title>
+
+    <!-- ===== FAVICON ===== -->
+    <link rel="icon" href="https://www.google.com/s2/favicons?domain=linux.org&sz=64">
 </head>
 
 <body>
 
+<!-- ===== HEADER / ENCABEZADO ===== -->
 <header>
-    <nav>
-     <img src="img/faviconV2.png" alt="Logo Foro Gaming" width="50">
-    </nav> 
-    
-    <h1>Categorías:</h1>
+
+    <!-- Logo -->
+    <img src="img/faviconV2.png" alt="Logo Foro Gaming" width="50">
+
+    <!-- Título principal -->
+    <h1>Categorías</h1>
+
+    <!-- Menú de navegación -->
     <nav>
         <a href="#login">Login</a>
         <a href="#inicio">Inicio</a>
         <a href="#foro">Foro</a>
         <a href="#amigos">Amigos</a>
-        <a href="#contacto">Ir a contacto</a>
+        <a href="#contacto">Contacto</a>
     </nav>
-       
-    </nav>
+
 </header>
 
-    <hr>
-    <hr>
+<hr>
 
-<h3>Hashtags populares!</h3>
-<ul>
-    <li># 1|#JuegoFPS | </li>
-    <li># 2|#JuegoRPG |</li>
-    <li># 3|#JuegoOnline|</li>
-</ul>
-
-        <hr>
-
+<!-- ===== CONTENIDO PRINCIPAL ===== -->
 <main>
+
+    <!-- ===== LISTA DE HASHTAGS ===== -->
+    <section>
+        <h3>Hashtags populares</h3>
+        <ul>
+            <li>#1 | #JuegoFPS</li>
+            <li>#2 | #JuegoRPG</li>
+            <li>#3 | #JuegoOnline</li>
+        </ul>
+    </section>
+
+    <hr>
+
+    <!-- ===== SECCIÓN LOGIN ===== -->
     <section id="login">
-        <h2>LOGIN:</h2>
+        <h2>Login</h2>
 
         <form>
             <label for="email">Email:</label>
@@ -55,12 +67,16 @@
             <input type="submit" value="Ingresar">
         </form>
     </section>
-   
 
+    <hr>
+
+    <!-- ===== SECCIÓN INICIO ===== -->
     <section id="inicio">
-        <h2>Inicio: bienvenido al foro... </h2>
-        <p>Visitá las últimas noticias del gaming!:</p>
-        <a href="https://www.ign.com" target="_blank">Ir a noticias de videojuegos</a>
+        <h2>Inicio</h2>
+        <p>Visitá las últimas noticias del gaming:</p>
+
+        <!-- Enlace externo -->
+        <a href="https://www.ign.com" target="_blank">Ir a noticias</a>
 
         <hr>
 
@@ -71,11 +87,13 @@
             <textarea id="post" rows="4" cols="40" placeholder="¿Qué estás pensando?"></textarea><br><br>
             <input type="submit" value="Publicar">
         </form>
-
     </section>
 
+    <hr>
+
+    <!-- ===== SECCIÓN AMIGOS (TABLA) ===== -->
     <section id="amigos">
-        <h2>Última actividad amigos(as)</h2>
+        <h2>Actividad de usuarios</h2>
 
         <table border="1">
             <tr>
@@ -101,133 +119,98 @@
                 <td>23</td>
                 <td>Hace 5 minutos</td>
             </tr>
-             <tr>
-                <td>Lucas</td>
-                <td>3</td>
-                <td>Hace 10 minutos</td>
-            </tr>
-             <tr>
-                <td>Juan</td>
-                <td>4</td>
-                <td>Hace 50 minutos</td>
-            </tr>
         </table>
     </section>
 
+    <hr>
+
+    <!-- ===== ASIDE (INFO EXTRA) ===== -->
     <aside>
         <p>Usuarios conectados: 5</p>
     </aside>
 
+    <hr>
+
+    <!-- ===== SECCIÓN FORO ===== -->
     <section id="foro">
-
-        <hr>
-        <hr>
-
         <h2>Foro</h2>
+
+        <!-- POST 1 -->
         <article>
             <h3>Post 1 (imagen)</h3>
-            <H4>Usuario: Juan </H4>
-            <p>Jugando una partida online! #JuegoOnline </p>
+            <h4>Usuario: Juan</h4>
+            <p>Jugando una partida online! #JuegoOnline</p>
 
-
-           <img src="img/fortnite.jpg" alt="Juego online Fortnite"> <br><br>
+            <img src="img/fortnite.jpg" alt="Juego Fortnite" width="250"><br><br>
 
             <button>👍</button>
             <button>👎</button><br><br>
 
             <form>
-            <label>Comentar:</label>
-            <input type="text" placeholder="Comentario">
-            <input type="submit" value="Enviar">
-</form>
+                <label>Comentar:</label>
+                <input type="text" placeholder="Comentario">
+                <input type="submit" value="Enviar">
+            </form>
         </article>
 
-            <hr>
+        <hr>
 
+        <!-- POST 2 -->
         <article>
             <h3>Post 2 (video)</h3>
-            <H4>Usuario: Cainelli </H4>
-            <p>Post con video.</p>
+            <h4>Usuario: Cainelli</h4>
 
             <video width="250" controls>
-                <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
-            </video><br><br>
-
-            <button>👍</button>
-            <button>👎</button><br><br>
-
-            <label>Comentar:</label>
-            <input type="text" placeholder="Comentario">
-            <input type="submit" value="Enviar">
+                <source src="https://www.w3schools.com/html/mov_bbb.mp4">
+            </video>
         </article>
 
-            <hr>
+        <hr>
 
+        <!-- POST 3 -->
         <article>
             <h3>Post 3 (audio)</h3>
-            <H4>Usuario: Nahuel </H4>
-            <p>Post con audio.</p>
+            <h4>Usuario: Nahuel</h4>
 
             <audio controls>
-                <source src="https://www.w3schools.com/html/horse.mp3" type="audio/mpeg">
-            </audio><br><br>
-
-            <button>👍</button>
-            <button>👎</button><br><br>
-
-            <label>Comentar:</label>
-            <input type="text" placeholder="Comentario">
-            <input type="submit" value="Enviar">
+                <source src="https://www.w3schools.com/html/horse.mp3">
+            </audio>
         </article>
 
-            <hr>
+        <hr>
 
+        <!-- POST 4 -->
         <article>
-            <h3>Post 4 EJEMPLO: (video youtube)</h3>
-            <H4>Usuario: Thiago </H4>
-            <p>Mira este nuevo video, para saber cual es el mejor #JuegoFPS ! .</p>
+            <h3>Post 4 (YouTube)</h3>
+            <h4>Usuario: Thiago</h4>
 
             <iframe width="300" height="200"
-            src="https://youtube.com/embed/ioGCCiRB9xM?si=zWkCDNtA6Sbcd-5p"
-            title="Video"
-            allowfullscreen></iframe><br><br>
-
-            <button>👍</button>
-            <button>👎</button><br><br>
-
-            <label>Comentar:</label>
-            <input type="text" placeholder="Comentario">
-            <input type="submit" value="Enviar">
+                src="https://youtube.com/embed/ioGCCiRB9xM"
+                allowfullscreen>
+            </iframe>
         </article>
-        
-            <hr>
 
+        <hr>
+
+        <!-- POST 5 (DOCUMENTO PDF) -->
         <article>
             <h3>Post 5 (documento)</h3>
             <h4>Usuario: Lucas</h4>
-            <p>Les dejo una guía en PDF sobre estrategias en juegos RPG #JuegoRPG</p>
 
-            <!-- Enlace a documento -->
-            <a href="docs/Guía RPG.pdf" target="_blank">📄 Ver / Descargar documento</a><br><br>
+            <p>Guía RPG en PDF</p>
 
-            <!--  -->
-            <iframe src="docs/Guía RPG.pdf" width="300" height="200"></iframe><br><br>
+            <a href="docs/Guía RPG.pdf" target="_blank">📄 Ver documento</a><br><br>
 
-            <button>👍</button>
-            <button>👎</button><br><br>
-
-            <label>Comentar:</label>
-            <input type="text" placeholder="Comentario">
-            <input type="submit" value="Enviar">
+            <iframe src="docs/Guía RPG.pdf" width="300" height="200"></iframe>
         </article>
 
     </section>
 
 </main>
 
-        <hr>
-        <hr> 
-        
+<hr>
+
+<!-- ===== SECCIÓN CONTACTO ===== -->
 <section id="contacto">
     <h2>Contacto</h2>
 
@@ -244,9 +227,10 @@
         <input type="submit" value="Enviar">
     </form>
 </section>
-    
-    <hr>
 
+<hr>
+
+<!-- ===== FOOTER ===== -->
 <footer>
     <p>Thiago Cainelli © 2026</p>
 </footer>

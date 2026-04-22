@@ -1,0 +1,111 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    background-color: #f5f5f5;
+}
+
+*{
+    box-sizing: border-box;
+}
+
+/* NAV */
+.nav{
+    background-color: #333;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+}
+
+.nav nav{
+    display: flex;
+    gap: 20px;
+}
+
+.nav a{
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* CONTENEDOR PRODUCTOS */
+.productos{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 25px;
+    padding: 30px;
+}
+
+/* TARJETAS */
+.card{
+    position: relative;
+    width: 220px;
+    background-color: white;
+    border-radius: 15px; /* 🔥 bordes redondeados */
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1); /* 🔥 mejor que borde feo */
+    padding: 15px;
+    text-align: center;
+    overflow: hidden;
+    transition: transform 0.2s;
+}
+
+.card:hover{
+    transform: scale(1.05);
+}
+
+/* IMAGEN */
+.card img{
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    display: block;
+    margin-bottom: 10px;
+    border-radius: 10px;
+}
+
+/* ETIQUETA */
+.etiqueta{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: red;
+    color: white;
+    padding: 5px 8px;
+    font-size: 12px;
+    font-weight: bold;
+    border-radius: 5px;
+}
+
+/* BOTON */
+button{
+    background-color: #333;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+button:hover{
+    background-color: #05e2cf;
+}
+
+/* BOTON FLOTANTE CARRITO  */
+.flotante{
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #333;
+    color: rgb(3, 3, 3);
+    border: none;
+    padding: 10px 15px;
+    border-radius: 50%;
+    font-size: 18px;
+    cursor: pointer;
+}
+/* HOVER efecto (inicio, producto y contacto).*/
+.nav a:hover{
+    color: #00fff7;
+}

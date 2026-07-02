@@ -55,21 +55,31 @@ class ForoData {
 
     // Crea un post nuevo y lo agrega arriba
     agregarPost(contenido, imagen = null) {
-        const nuevoPost = {
-            id: Date.now(),
-            usuarioId: this.usuarioActivo.id,
-            usuario: this.usuarioActivo.nombre,
-            contenido,
-            imagen,
-            fecha: new Date().toLocaleString('es-ES'),
-            likes: 0,
-            dislikes: 0,
-            liked: false
-        };
-        this.posts.unshift(nuevoPost);
-        this.usuarioActivo.posteos++;
-        this.guardarDatos();
-        return nuevoPost;
+        try {
+            if (!contenido || contenido.trim().length === 0) {
+                throw new Error('El contenido del post no puede estar vacío');
+            }
+            
+            const nuevoPost = {
+                id: Date.now(),
+                usuarioId: this.usuarioActivo.id,
+                usuario: this.usuarioActivo.nombre,
+                contenido,
+                imagen,
+                fecha: new Date().toLocaleString('es-ES'),
+                likes: 0,
+                dislikes: 0,
+                liked: false
+            };
+            this.posts.unshift(nuevoPost);
+            this.usuarioActivo.posteos++;
+            this.guardarDatos();
+            return nuevoPost;
+        } catch (error) {
+            console.error('Error al crear post:', error.message);
+            alert('Error: ' + error.message);
+            return null;
+        }
     }
 
     // Agregar un comentario a un post
@@ -121,25 +131,33 @@ class Autenticacion {
     manejarLogin(evento) {
         evento.preventDefault();
 
-        const email = document.getElementById('email').value;
-        const usuario = document.getElementById('usuario').value;
-        const password = document.getElementById('password').value;
+        try {
+            const email = document.getElementById('email').value;
+            const usuario = document.getElementById('usuario').value;
+            const password = document.getElementById('password').value;
 
-        if (!email || !usuario || !password) {
-            alert('Completa todos los campos');
-            return;
-        }
+            if (!email || !usuario || !password) {
+                throw new Error('Todos los campos son obligatorios');
+            }
 
-        const usuarioValido = foro.validarLogin(email, password);
+            if (!email.includes('@')) {
+                throw new Error('Email inválido');
+            }
 
-        if (usuarioValido) {
-            foro.usuarioActivo = usuarioValido;
-            foro.guardarDatos();
-            this.mostrarMensajeExito(`Bienvenido, ${usuarioValido.nombre}`);
-            this.formularioLogin.reset();
-            this.actualizarEstadoUI();
-        } else {
-            alert('Email o contraseña incorrectos');
+            const usuarioValido = foro.validarLogin(email, password);
+
+            if (usuarioValido) {
+                foro.usuarioActivo = usuarioValido;
+                foro.guardarDatos();
+                this.mostrarMensajeExito(`Bienvenido, ${usuarioValido.nombre}`);
+                this.formularioLogin.reset();
+                this.actualizarEstadoUI();
+            } else {
+                throw new Error('Email o contraseña incorrectos');
+            }
+        } catch (error) {
+            console.error('Error en login:', error.message);
+            alert(error.message);
         }
     }
 
@@ -349,18 +367,26 @@ class InterfazUsuario {
 
     // Envía un comentario nuevo
     enviarComentario(evento) {
-        const postId = evento.target.dataset.postId;
-        const input = document.querySelector(`.input-comentario[data-post-id="${postId}"]`);
-        const contenido = input.value;
+        try {
+            const postId = evento.target.dataset.postId;
+            const input = document.querySelector(`.input-comentario[data-post-id="${postId}"]`);
+            const contenido = input.value;
 
-        if (!contenido.trim()) {
-            alert('Escribe algo');
-            return;
+            if (!contenido.trim()) {
+                throw new Error('Escribe un comentario válido');
+            }
+
+            if (contenido.length > 500) {
+                throw new Error('El comentario no puede exceder 500 caracteres');
+            }
+
+            foro.agregarComentario(parseInt(postId), contenido);
+            input.value = '';
+            this.actualizarComentarios(postId);
+        } catch (error) {
+            console.error('Error al enviar comentario:', error.message);
+            alert(error.message);
         }
-
-        foro.agregarComentario(parseInt(postId), contenido);
-        input.value = '';
-        this.actualizarComentarios(postId);
     }
 
     // Actualiza los comentarios sin recargar todo

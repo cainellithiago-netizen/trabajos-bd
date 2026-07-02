@@ -1,22 +1,55 @@
-# Foro Gaming
+# 🎮 FORO GAMING - Sistema Interactivo
 
 ## Descripción
 
-Este proyecto consiste en el desarrollo de una página web tipo foro orientada a la temática de videojuegos. El sitio permite a los usuarios visualizar contenido, interactuar con publicaciones y simular el funcionamiento básico de una comunidad online.
+Este proyecto es un **foro gaming completamente interactivo** desarrollado con HTML, CSS y JavaScript vanilla. Permite a los usuarios autenticarse, crear publicaciones, comentar, dar likes/dislikes y interactuar en tiempo real con un almacenamiento persistente en localStorage.
+
+### ⚡ Características Principales
+
+✅ **Sistema de Autenticación** - Login con validación  
+✅ **Posts Dinámicos** - Crear y visualizar publicaciones en tiempo real  
+✅ **Comentarios** - Sistema interactivo de comentarios por post  
+✅ **Reacciones** - Likes y dislikes en cada publicación  
+✅ **Tabla de Usuarios** - Visualización de actividad  
+✅ **Almacenamiento Persistente** - localStorage automático  
+✅ **Interfaz Moderna** - Diseño premium con degradados  
+✅ **Fully Responsive** - Funciona en desktop, tablet y mobile  
 
 ---
 
-## Estructura del sitio
+## 🚀 Inicio Rápido
 
-El desarrollo fue realizado utilizando HTML, aplicando etiquetas semánticas para organizar el contenido:
+### 1. Abre la página
+Abre `web.html` en tu navegador
 
-* Encabezado (header) con menú de navegación
-* Contenido principal (main) dividido en secciones
-* Pie de página (footer)
+### 2. Inicia sesión
+Usa cualquiera de estos usuarios de prueba:
+- **Email**: thiago@mail.com | **Password**: 123
+- **Email**: juan@mail.com | **Password**: 123
+
+### 3. ¡Empieza a interactuar!
+- Crea posts en la sección "Inicio"
+- Comenta en cualquier publicación
+- Dale like/dislike a posts
 
 ---
 
-## Contenido incluido
+## 📁 Estructura del Proyecto
+
+```
+📁 pagina web
+├── 📄 web.html              # Estructura HTML (header, nav, secciones)
+├── 🎨 style.css             # Estilos CSS (variables, diseño)
+├── ⚙️  script.js            # SISTEMA INTERACTIVO (ForoData, Autenticacion, UI)
+├── 📋 DOCUMENTACION.md      # Guía técnica detallada
+├── 📄 README.md             # Este archivo
+├── 📁 docs/                 # Documentos PDF
+└── 🖼️  img/                 # Imágenes del foro
+```
+
+---
+
+## Contenido Incluido
 
 El sitio web cuenta con los siguientes apartados:
 

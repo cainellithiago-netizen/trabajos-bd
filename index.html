@@ -55,6 +55,8 @@
     <hr>
 
     <!-- ===== SECCIÓN LOGIN ===== -->
+    <!-- [LOGIN] Formulario de autenticación de usuarios -->
+    <!-- El JS maneja: validación, almacenamiento de sesión, mostrar/ocultar según estado -->
     <section id="login">
         <h2>Login</h2>
 
@@ -75,6 +77,8 @@
     <hr>
 
     <!-- ===== SECCIÓN INICIO ===== -->
+    <!-- [INICIO] Panel del usuario autenticado -->
+    <!-- El JS maneja: crear publicaciones, mostrar datos del usuario, logout -->
     <section id="inicio">
         <h2>Inicio</h2>
         <p>Visitá las últimas noticias del gaming:</p>
@@ -96,6 +100,8 @@
     <hr>
 
     <!-- ===== SECCIÓN AMIGOS (TABLA) ===== -->
+    <!-- [AMIGOS] Tabla de usuarios activos del foro -->
+    <!-- El JS renderiza dinámicamente la tabla con datos de usuarios almacenados -->
     <section id="amigos">
         <h2>Actividad de usuarios</h2>
 
@@ -146,10 +152,14 @@
     <hr>
 
     <!-- ===== SECCIÓN FORO ===== -->
+    <!-- [FORO] Feed dinámico de publicaciones -->
+    <!-- El JS renderiza posts dinámicamente con sistema de likes, dislikes y comentarios -->
+    <!-- Los posts estáticos abajo son solo referencia visual y serán reemplazados -->
     <section id="foro">
         <h2>Foro</h2>
 
-        <!-- POST 1 -->
+        <!-- POSTS DINÁMICOS: El JS los genera automáticamente desde localStorage -->
+        <!-- ===== POST 1 ===== -->
         <article>
             <h3>Post 1 (imagen)</h3>
             <h4>Usuario: Juan</h4>
@@ -227,6 +237,8 @@
 <hr>
 
 <!-- ===== SECCIÓN CONTACTO ===== -->
+<!-- [CONTACTO] Formulario de contacto con el equipo del foro -->
+<!-- El JS puede extender esta sección con validación y envío de datos -->
 <section id="contacto">
     <h2>Contacto</h2>
 
@@ -251,6 +263,10 @@
 <footer>
     <p>Thiago Cainelli © 2026</p>
 </footer>
+
+<!-- ===== SCRIPTS ===== -->
+<!-- Carga el sistema interactivo del foro -->
+<script src="script.js"></script>
 
 </body>
 </html>
